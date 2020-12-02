@@ -1,11 +1,11 @@
 public class Human extends Animal {
-    int healthPoint = 5;
+    int healthPoint = 5; // 기본 체력
 
-    public Human() {
-    }
+    public Human() { }
 
+    // 먹으면 체력 ++
     void eat() {
-        ++this.healthPoint;
+        this.healthPoint ++ ;
     }
 
     void run() {

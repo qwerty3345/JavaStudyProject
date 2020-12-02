@@ -1,6 +1,5 @@
 public class Eagle extends Bird implements Flyable {
-    Eagle() {
-    }
+    Eagle() { }
 
     Eagle(int age, String name) {
         super(age, name);
@@ -10,6 +9,7 @@ public class Eagle extends Bird implements Flyable {
         super(name, age);
     }
 
+    // fly 구현
     public void fly() {
         System.out.println(this.name + " 날아오름.");
     }

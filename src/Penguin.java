@@ -1,6 +1,5 @@
 public class Penguin extends Bird {
-    Penguin() {
-    }
+    Penguin() { }
 
     Penguin(int age, String name) {
         super(age, name);
