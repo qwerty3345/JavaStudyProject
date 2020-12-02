@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class Villain extends Human {
-    Stack<Human> servant; //빌런의 부하
+    Stack<Human> servant= new Stack(); //빌런의 부하.
     private int power; // 파워
 
     // 빌런 기본 생성자
@@ -11,7 +11,6 @@ public class Villain extends Human {
 
     // 빌런 생성자
     Villain(String name, int power, int healthPoint) {
-        this.servant = new Stack();
         this.name = name;
         this.power = power;
         this.healthPoint = healthPoint;
@@ -40,7 +39,7 @@ public class Villain extends Human {
     void loseServant(int num) {
         if (this.servant.size() > num) {
             for(int i = 0; i < num; ++i) {
-                this.servant.pop();
+                this.servant.pop(); // Stack구조. 최근에 들어온 신입부터 때려침.
             }
             System.out.println(this.name + "의 신입 부하 " + num + " 명이 때려침.");
         } else {
